@@ -5,3 +5,4 @@ voicefiles
 frandlee*.json
 text-to*.json
 config
+.gitignore

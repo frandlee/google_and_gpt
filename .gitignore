@@ -1,0 +1,7 @@
+*node_modules
+chatFiles
+test
+voicefiles
+frandlee*.json
+text-to*.json
+config

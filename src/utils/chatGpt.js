@@ -1,12 +1,11 @@
 import { Configuration, OpenAIApi } from "openai";
 import { readFileIfExist, writeIntoFile } from "./utils.js";
 
-export async function openaiChat(GPT_API_KEY, words) {
+export async function openaiChat(GPT_API_KEY, chatDir, words) {
     const openai = new OpenAIApi(new Configuration({
         apiKey: GPT_API_KEY,
     }))
 
-    let chatDir = "/home/nodejs/google_and_gpt/chatFiles";
     let fileName = words + ".json";
 
     let prompt = "Give me an example sentence with the N2 levle Japanese word '" + words + "' in Japanese, English and Chinese. \

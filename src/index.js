@@ -8,6 +8,7 @@ const voiceFileDir = '/tmp';
 let gpt_api_key = process.env.GPT_API_KEY;
 let hostName = process.env.HOST_NAME;
 let port = process.env.PORT;
+let chatDir = process.env.CHAT_DIR;
 console.debug(`HOST_NAME: ${hostName}`);
 console.debug(`PORT: ${port}`);
 console.debug(`GPT_API_KEY: ${gpt_api_key}`);
@@ -25,7 +26,7 @@ app.get('/chatgpt', async function (req, res) {
   console.debug(req.query);
   const words = req.query['words'];
   console.debug('words: ' + words);
-  const results = await openaiChat(gpt_api_key, words)
+  const results = await openaiChat(gpt_api_key, chatDir, words)
   console.debug(typeof results);
   console.debug(results);
   res.json(results)

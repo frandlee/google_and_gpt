@@ -8,12 +8,10 @@ export async function openaiChat(GPT_API_KEY, chatDir, words) {
 
     let fileName = words + ".json";
 
-    let prompt = "Give me an example sentence with the N2 levle Japanese word '" + words + "' in Japanese, English and Chinese. \
-    The result should be in JSON format: \
+    let prompt = "Give an example sentence with the Japanese word '" + words + "' in Japanese. \
+    No need of translation. The result should be in JSON format: \
     {\
-        Japanese: Japanese, \
-        English: English, \
-        Chinese: Chinese \
+        Japanese: Japanese\
     }";
 
     // 1. check from previous search results

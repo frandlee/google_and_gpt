@@ -5,3 +5,5 @@ voicefiles
 frandlee*.json
 text-to*.json
 config
+chatFiles
+.DS_Store
